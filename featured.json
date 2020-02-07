@@ -1,10 +1,9 @@
-[
-    {
+[{
         "url": "http://xkcd.com/",
         "title": "xkcd",
         "imageUrl": "http://imgs.xkcd.com/comics/alternative_energy_revolution.jpg"
     },
-    {
+{
         "url": "http://nedroid.com/",
         "title": "nedroid",
         "imageUrl": "http://nedroid.com/comics/2009-02-12-beartato-cheerupface.jpg"

@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -17,8 +17,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run format --if-present
-    - run: npm test
+    - name: Installing NPM dependencies
+      run: npm install
+    - name: Formatting the json files
+      run: npm run format --if-present
+    - name: Commit files
+      run: git commit -m "formatted files for merge request"
+      run: git push -f
       env:
         CI: true
