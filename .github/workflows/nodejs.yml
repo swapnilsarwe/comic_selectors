@@ -22,8 +22,11 @@ jobs:
     - name: Formatting the json files
       run: npm run format --if-present
     - name: Commit files
-      run: git commit -m "formatted files for merge request"
-    - name: Pushing the formatted changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git commit -m "formatted files for merge request"
+    - name: Publish the formatted changes
       run: git push -f
       env:
         CI: true
