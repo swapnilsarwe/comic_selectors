@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+    formatter:
+        runs-on: ubuntu-latest
+        name: A job to format the json files
+        steps:
+        - name: Format the files
+          run: yarn format
