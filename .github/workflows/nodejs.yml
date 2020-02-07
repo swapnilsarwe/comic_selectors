@@ -23,6 +23,7 @@ jobs:
       run: npm run format --if-present
     - name: Commit files
       run: git commit -m "formatted files for merge request"
+    - name: Pushing the formatted changes
       run: git push -f
       env:
         CI: true
